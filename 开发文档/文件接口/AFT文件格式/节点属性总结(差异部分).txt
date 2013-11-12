@@ -1,0 +1,349 @@
+异径管:
+	RowObjectFace<1> m_TypeID;			//异径管类型（0：圆锥，1：圆柱，2：用户定义）
+	RowObjectFace<1> m_Dir;				//（1：收缩，2：扩张）
+	RowObjectFace<1> m_Angle;			//角度
+	RowObjectFace<1> m_K;				//K系数值
+    	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用
+        其中 57、大小 58、单位，没有
+
+指定流量：
+	RowObjectFace<3> m_Flow;				//流量类型\大小\单位
+	RowObjectFace<1> m_FlowDir;				//0：流体流入，1：流体流出
+	RowObjectFace<1> m_K;					//损失系数K值	
+	RowObjectFace<4> m_InitPress;			//恒定流量为0的初始化压力（0，没有选，-1选中）\压力类型（0水头，1：压力）\压力值\单位
+	JunTransData m_TranData;
+指定压力：
+	TableData<3> m_linkPipeK;			//52、流体从节点流入管道时管道端口k系数
+										//53、流体从节点流出管道时管道端口k系数
+										//54、管道端口与节点标高距离
+	RowObjectFace<3> m_Press;			//压力类型0：停滞压力1：静止压力\值\单位 
+	RowObjectFace<1> m_EleUnit;			//管道端口与节点标高距离单位
+	JunTransData m_TranData;
+弯头：
+	RowObjectFace<1> m_bendType;   //弯头类型（0，为光滑弯头，1为标准弯头，2为Mitre Bend,3,为用户指定）
+    	RowObjectFace<1> m_angel;      //角度（为多少度）
+	RowObjectFace<1> m_rD;          //r/D
+	RowObjectFace<1> m_K;			//阻力损失（K）
+    	RowObjectFace<2> m_RestriFlowArea;  //精确流体面积（Restricted Flow Area)的数字和单位
+	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用0：默认上游管道面积，1：下游管道面积2：用户指定面积3：用户指定直径
+分支元件：
+	TableData<3> m_linkPipeK;			//52、流体从节点流入管道时管道端口k系数
+										//53、流体从节点流出管道时管道端口k系数
+										//54、管道端口与节点标高距离
+	RowObjectFace<3> m_ImposeFlow;		//流量类型\大小\单位
+	RowObjectFace<1> m_EleUnit;			//管道端口与节点标高距离单位
+	JunTransData m_TranData;			//没有周期函数RowObjectFace<5> m_Periodic;
+真空破坏器：
+	RowObjectFace<3>   m_CrackPress;             //破裂的压力类型0：水头，1：压力/压力值/压力单位
+	RowObjectFace<2>   m_OrificeInCdA;             //孔口全部打开流入面积值/单位
+	RowObjectFace<2>   m_OrificeOutCdA;			//流出面积值/单位
+	RowObjectFace<3>   m_LiquidTemp;             //流体温度选择0：系统属性1：用户指定温度/温度值/单位
+	RowObjectFace<9>   m_GasProperty;			//气体属性0：空气1、其它气体/分子量/Cp/Cv/气体温度/气体压力/内部初始化气体气体质量/单位
+	RowObjectFace<1>   m_ConnectPipe;			//连接管道数0：两根管道1：一根管道
+	RowObjectFace<1>   m_ValveType;				//阀门类型
+	RowObjectFace<2>   m_InterMediateCdA;		//孔口全部打开媒介流出面积值/单位
+	RowObjectFace<3>   m_MediateActivation;		//媒介孔口激活标准0：压力不同1：流速不同/标准值/准值的单位
+LiquidAccumData：
+	RowObjectFace<2> m_Elastic;				//弹性值\弹性单位
+    	RowObjectFace<2> m_Volume;				//初始体积值\初始体积值单位
+泵：
+	RowObjectFace<1> m_PumpType;				//泵模型的类型0：泵曲线，1：指定体积流量2：指定质量流量
+	RowObjectFace<3> m_PumpFlow;				//流量类型\流量大小\单位
+	
+	RowObjectFace<1> m_SpeedRatio;				//变速泵的速率相对泵曲线的速率（1：表示100%）
+	RowObjectFace<1> m_UnKown3;					////0（未知）参考控制阀门控制设置
+	RowObjectFace<4> m_PumpControl;				//控制泵类型（0：没有控制，1：输出端压力/水头控制，3：输入端压力/水头控制，2：流量控制
+												//控制点参数类型0：水头/水头损失/体积流量1：压力/压力损失/质量流量
+												//控制点参数值
+												//控制点参数单位
+	RowObjectFace<1> m_ControlApply;            //控制对应的情况设置（0：总是控制1：压力超过控制设置2：压力低于控制设置）
+	RowObjectFace<4> m_ViscosCorrection;		//粘度修正（0：不使用粘度修正，-1：使用粘度修正）
+    											//压力修正选择（0：假定计算流量在BEF；1：用户输入流量最佳效率点）
+												//用户输入的值
+												//用户输入的值的单位
+	RowObjectFace<1> m_NPSHRefValule;			//NPSH参考
+	RowObjectFace<1> m_PressType;				//0：停滞压力1：静态压力
+	RowObjectFace<4> m_SubmergePump;           	//0：潜水泵没有选择；-1：潜水泵选择
+												//压力的类型0：水头1：压力
+												//吸入口压力值
+												//吸入口压力单位
+	RowObjectFace<1> m_ExitCheck;				//-1：选择出口止回阀，0：没有选择出口止回阀
+//	RowObjectFace<1> m_TranModel;				//瞬变模型
+//	RowObjectFace<2> m_RotateInertia;			//转动惯量（泵，电动机，流体）\转动惯量单位
+//	RowObjectFace<1> m_Speed;					//泵额定转速
+	RowObjectFace<1> m_PumpSet;					//并联泵：泵的数量；串连泵：负号+泵的数量
+//	RowObjectFace<3> m_FourQuadrantData;        //四象限数据源标记\四象限数据的数量\角度选择0：1：
+//	RowObjectFace<6> m_UnKown4;					//None,2,0,None,,,
+	RowObjectFace<2> m_CloseVel;		        //关闭阀门的最小速度\速度单位
+	RowObjectFace<1> m_antiReverse;				//-1：没有选择限制泵反转，0选择限制泵反转
+	RowObjectFace<3> m_ReOpenPress;				//重新打开阀门Delta(压力或水头)0：水头1：压力\压力值\单位
+	PumpConfig       m_Config;
+	JunTransData m_TranData;
+安全阀：
+	RowObjectFace<1> m_Type;			//类型(1:内部安全阀（internal relief）2:出口安全阀（exit relief）3:内嵌安全阀（inline relief）)
+	VariableFace<13,7> m_Curve;			//损失模型(0：流量系数模型，1：K系数模型3：变流量系数)
+										//Y轴参数类型数字标记[]
+										//Y轴参数单位[]
+										//X轴参数类型数字标记[]
+										//X轴参数单位[]
+										//x的最大取值[]
+										//曲线类型[曲线类型（-2：K值变化，1：压力损失多项式，2：压力损失内插值）]
+										//公式中参数和常量的个数[]
+										//公式中的参数和常量a，b，c，d，e的值[]
+	RowObjectFace<1> m_UnKown;			//1（未知）
+	RowObjectFace<5> m_CrackExitPress;	//压力/水头类型0：绝对水头1：绝对压力2：水头差3：压力差
+										//破裂压力\单位
+										//出口压力\单位
+	RowObjectFace<1> m_KOrCv;			//K或Cv系数值
+	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用0：默认上游管道面积，1：下游管道面积2：用户指定面积3：用户指定直径
+										//值
+										//单位
+	JunTransData m_TranData;
+水库：
+	TableData<5> m_linkPipeK;			//流体从节点流入管道时管道端口k系数
+										//流体从节点流出管道时管道端口k系数
+										//管口类型（0：用户，1：锐角出口，2：圆角出口，3：锐角突边出口）
+										//r/d
+										//管道标高或深度值
+	RowObjectFace<2> m_EleOrDepth;		//管道标高或深度\单位
+	RowObjectFace<2> m_SurfacePress;	//表面压力值\单位
+	RowObjectFace<2> m_Teamperature;	//流体温度\单位
+	RowObjectFace<2> m_Density;			//流体密度\单位
+	RowObjectFace<2> m_UnKown;			//0（未知）\0（未知）
+	RowObjectFace<1> m_EleOrDepthType;	//管道标高或深度(-1,0)
+	JunTransData m_TranData;
+喷嘴管口：
+	RowObjectFace<1> m_Type;			//类型(Spray类型0：喷嘴管口1：喷雾)
+	VariableFace<13,7> m_Curve;			//损失模型(0：流量系数1：K系数(fire sprinklers K值的定义是： K = Q/sqrt(dP))
+										//Y轴参数类型数字标记[选K系数本项数值为‘1]
+										//Y轴参数单位[sqrt(dP)的单位]
+										//X轴参数类型数字标记[流体参数类型（0：体积流量]
+										//X轴参数单位[流量的单位]
+										//x的最大取值[未使用]
+										//曲线类型[未使用]
+										//公式中参数和常量的个数[未使用]
+										//公式中的参数和常量a，b，c，d，e的值[未使用]
+	RowObjectFace<3> m_SprayArea;		//单个孔口的面积\面积单位\喷嘴孔的数量
+	RowObjectFace<1> m_KOrCv;			//K或Cv系数值
+	RowObjectFace<3> m_ExitPress;	    //出口压力的类型0：水头1：压力
+										//压力值
+										//单位
+	JunTransData m_TranData;
+调压塔：
+	TableData<3> m_linkPipeK;			//流体从节点流入管道时管道端口k系数
+										//流体从节点流出管道时管道端口k系数
+										//管道端口与节点标高距离
+	RowObjectFace<1> m_EleUnit;			//管道端口与节点标高距离单位
+	RowObjectFace<2> m_SurgeHeight;			//调压塔的高度\单位
+	RowObjectFace<2> m_ConstArea;		//底面积值\单位
+	RowObjectFace<2> m_SurfacePress;	//表面压力\单位
+	RowObjectFace<5> m_Orifice;			//选中节流孔板模型标记\入流量系数\出流量系数\面积值\单位
+	RowObjectFace<10> m_ShortPipe;		    //0：没有选择短管道模型，-1：选择短管道模型
+										//短管道摩擦系数
+										//短管道内直径
+										//短管道内直径单位
+										//短管道面积
+										//短管道面积单位
+										//短管道长度
+										//短管道长度单位
+										//短管道标高变化
+										//短管道标高单位
+	RowObjectFace<1> m_OneWay;			//“One-Way Surge Tank”0：没有选择，-1选择来建模有止回阀特征的缓冲罐。
+	RowObjectFace<4> m_Vessel;			//模拟文丘里管0：没有选择，-1：选择
+										//文丘里管到管道的高度
+										//文丘里管高度单位
+										//多变的常量
+	RowObjectFace<1> m_Variable;		//标记：选择面积恒定0，面积变化1
+
+	RowObjectFace<3> m_InitSurfaceH;	//稳定状态初始化流体高度0：没有选择-1：选择
+										//高度值
+										//高度单位
+
+	                                    //AFT文件的Bug界面上数据不能保存到文件
+	RowObjectFace<5> m_CheckValve;		//止回阀流量系数
+										//止回阀初始位置0：打开1：关闭
+										//打开阀门Delta压力或水头的压力类型0：水头1：压力
+										//压力值
+										//压力单位
+	TwoDTable m_AreaTable;
+	JunTransData m_TranData;
+三通和Y型元件：
+	RowObjectFace<1> m_Type;				//类型（0，锐边直三通1，圆边直三通2，面积改变3，对称）
+	RowObjectFace<1> m_Angle;				//角度
+	RowObjectFace<1> m_arrangement;		    //实际布置和图形同步选中为-1，0没选中
+	RowObjectFace<1> m_LossModel;			//损失模型类型（1：简单模型2：详细模型）
+阀门：
+	RowObjectFace<1> m_Type;			//类型(0：内部阀门，-1：出口阀门)
+	VariableFace<13,7> m_Curve;			//损失模型(0：流量系数模型，1：K系数模型)
+										//Y轴参数类型数字标记[]
+										//Y轴参数单位[]
+										//X轴参数类型数字标记[]
+										//X轴参数单位[]
+										//x的最大取值[]
+										//曲线类型[曲线类型（-2：K值变化，1：压力损失多项式，2：压力损失内插值）]
+										//公式中参数和常量的个数[]
+										//公式中的参数和常量a，b，c，d，e的值[]
+	RowObjectFace<3> m_ExitPress;		//出口压力类型0：水头1：压力\压力值\单位
+	RowObjectFace<1> m_KOrCv;			//K或Cv系数值
+	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用0：默认上游管道面积，1：下游管道面积2：用户指定面积3：用户指定直径
+										//值
+										//单位
+	RowObjectFace<2> m_UnKown;			//1（未知）\0（未知）
+	RowObjectFace<1> m_UnKown3;         //0（未知）
+	JunTransData m_TranData;			//没有周期函数RowObjectFace<5> m_Periodic;
+kkkkk
+
+
+流量控制阀：
+	RowObjectFace<5> m_ControlSet;				//阀门类型0：PRF 1：PSV 2：FCV 3：PDCV
+												//控制点参数类型0：水头/水头损失/体积流量1：压力/压力损失/质量流量
+												//0：停滞压力1：静态压力
+												//控制点参数值
+												//控制点参数单位
+	RowObjectFace<2> m_UnKown;					//-2（未知）\0（未知）
+	RowObjectFace<1> m_ModelType;				//损失模型(0：流量系数模型，1：K系数模型 -2：使用系数表的值)
+	RowObjectFace<1> m_KOrCv;					//K或Cv系数值
+	RowObjectFace<1> m_UnKown4;					//none 
+	RowObjectFace<1> m_DataUnitNum;				//1(打开百分比，K/CV系数)2(打开百分比单位\K/CV系数单位\阀门面积单位)
+	RowObjectFace<1> m_KOrCvNum;				//阀门系数表数据的数量
+
+	ThreeDTable      m_KOrCvData;				//打开百分比单位\K/CV系数单位\阀门面积单位
+												//打开百分比，K/CV系数，阀门面积值
+
+
+	RowObjectFace<3> m_UnKown5;					//0,0,None
+	RowObjectFace<4> m_failAction;				//稳定状态总是控制0：没有选择 1：选择
+	JunTransData m_TranData;
+	JunTransData m_FailTranData;
+止回阀：
+	VariableFace<13,7> m_Curve;			//损失模型(0：流量系数模型，1：K系数模型)
+										//Y轴参数类型数字标记[]
+										//Y轴参数单位[]
+										//X轴参数类型数字标记[]
+										//X轴参数单位[]
+										//x的最大取值[]
+										//曲线类型[曲线类型（-2：K值变化，1：压力损失多项式，2：压力损失内插值）]
+										//公式中参数和常量的个数[]
+										//公式中的参数和常量a，b，c，d，e的值[]
+	RowObjectFace<1> m_UnKown;			//0（未知）//参考AssignFlowData::m_InitPress
+	RowObjectFace<3> m_ReOpenPress;		//重新打开阀门Delta(压力或水头)0：水头1：压力\压力值\单位
+	RowObjectFace<1> m_KOrCv;			//K或Cv系数值
+	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用0：默认上游管道面积，1：下游管道面积2：用户指定面积3：用户指定直径
+										//值
+										//单位
+	//JunTransData m_TranData;			//没有周期函数RowObjectFace<5> m_Periodic;
+										//没有RowObjectFace<1> m_Repeat1;
+										//没有RowObjectFace<1> m_Repeat2
+										//没有RowObjectFace<1> m_TranType;
+										//没有RowObjectFace<8> m_TranTriger1; 
+										//没有RowObjectFace<8> m_TranTriger2; 
+	RowObjectFace<2> m_CloseVel;		//关闭阀门的最小速度\速度单位
+	JunTransData m_TranData;													//使用默认的行为  0：没有选择 1：选择
+												//上游压力不足表现0：全部打开 1：关闭
+												//下游压力超过表现0：全部打开 1：关闭
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+JunTransData：
+	RowObjectFace<1> m_ValueType;		//1、0:绝对值，1：相对恒定流的值
+	RowObjectFace<1> m_Special;			//2、0：瞬态特别条件选中“没有”，1：瞬态特别条件选“忽略瞬态数据”（针对具体节点特别条件多于2个分别查看特别条件对应的数字）
+	RowObjectFace<1> m_Repeat1;			//3、0：第一次瞬变重复没选中，-1选中：
+	RowObjectFace<1> m_Repeat2;			//4、0：第二次瞬变重复没选中，-1选中：
+	RowObjectFace<1> m_TranType;		//5、0:时间，1：单个事件，2：两个事件循环3：两个连续事件
+	RowObjectFace<5> m_Periodic;		//1、0：周期性没有选择，-1：流量周期性选择
+										//2、0：没有选择使用正弦函数的绝对值，-1：选择使用正弦函数的绝对值
+										//3、正弦函数频率
+										//4、正弦函数振幅
+										//5、正弦函数振幅单位
+	RowObjectFace<8> m_TranTriger1;     //事件类型
+										//条件类型
+										//值
+										//单位
+										//管道入口触发事件为1；管道出口触发事件为2（第一根管道）
+										//触发事件的管道编号（第一根管道）
+										//管道入口触发事件为1；管道出口触发事件为2（第二根管道）
+										//触发事件的管道编号（第二根管道）
+	RowObjectFace<8> m_TranTriger2;
+
+	//泵瞬变数据
+	RowObjectFace<1> m_TranModel;				//泵瞬变模型
+	RowObjectFace<2> m_RotateInertia;			//转动惯量（泵，电动机，流体）\转动惯量单位
+	RowObjectFace<1> m_Speed;					//泵额定转速
+	RowObjectFace<3> m_FourQuadrantData;        //四象限数据源标记\四象限数据的数量\角度选择0：1：
+	TwoDTable m_Trans1Table;			//none（未知）\1（未知）
+										//瞬态数据数量（第一次瞬态）
+									    //第一项数据单位\第二项数据单位
+										//数据
+	TwoDTable m_Trans2Table;			//none（未知）\1（未知）
+										//瞬态数据数量（第一次瞬态）
+									    //第一项数据单位\第二项数据单位
+										//数据'
+
+	ThreeDTable m_FourquadTable;        //泵使用的第四象限数据表
+
+管道：
+	RowObjectFace<1>  m_Number;             //管道编号
+	RowObjectFace<1>  m_Name;				//管道名称
+	RowObjectFace<1>  m_LenUnit;			//长度的单位
+	RowObjectFace<1>  m_EleUnit;			//标高单位
+	RowObjectFace<1>  m_InEle;				//入口标高
+	RowObject  m_OutLenEleList;		//管道内部标高加末段标高数量(距离,标高)
+	RowObjectFace<1>  m_UnKown1;           //0
+	RowObject  m_PtArray;			//管道图形点的个数
+	RowObjectFace<1>  m_UnKown2;			//None
+	RowObjectFace<1>  m_definedMark;       //管道定义是否完成标记0(为完成)-1(管道定义完成)
+	RowObjectFace<1>  m_LockMark;			//0表示锁定图形-1表示锁定图形
+	RowObjectFace<1>  m_InJunID;			//入口节点的ID号
+	RowObjectFace<1>  m_OutJunID;			//出口节点的ID号
+	RowObjectFace<2>  m_InDia;				//管道内径，管道内径单位
+	RowObjectFace<4>  m_FrictionModel;		//摩擦力模型、类型、系数、单位
+	RowObjectFace<1>  m_UnKown3;			//0
+	RowObjectFace<1>  m_UnKown4;			//0
+	RowObjectFace<3>  m_PipeAttr;			//管道材料、尺寸、类型
+	RowObjectFace<2>  m_LocalK;			//总共局部的K系数,局部阻力件
+	RowObjectFace<2>  m_DisignFactor;		//设计因子管道摩擦力\管道附加损失
+	RowObjectFace<3>  m_InitFlow;			//初始化流体猜测类型（0，1，2）\大小\单位
+	RowObjectFace<1>  m_FuildMark;			//标记是否使用变流体属性
+	RowObjectFace<11>  m_FuildAttr;			//流体属性11个数据
+	RowObjectFace<2>  m_SpecialMark;		//指定特别条件类型标记（没有为0）\关联的节点的关闭节点
+	RowObjectFace<1>  m_UnKown5;			//1		
+	RowObjectFace<4>  m_LabLocation;		//工作区文字显示位置(4)
+	RowObjectFace<1>  m_Display;			//工作区显示
+	RowObjectFace<4>  m_UnKown6;			//5\-1\-1\25
+	RowObjectFace<1>  m_PipeColor;			//管道颜色值（-1：引用工作设置）
+	RowObjectFace<1>  m_UnKown7;			//-1
+	RowObjectFace<1>  m_LineThick;			//管线粗细像素
+	RowObject  m_Alerts;					//报警设计的数量类型号\ 最大（2）或最小（1）\数值\单位
+	RowObjectFace<2>  m_notes;				//
+	RowObjectFace<1>  m_UnKown8;			//-1
+	RowObjectFace<5>  m_Font;				//字体设置
+	RowObjectFace<2>  m_PipeThick;			//管道壁厚值\单位
+	RowObjectFace<2>  m_ElasModulus;		//弹性摸量值\单位
+	RowObjectFace<1>  m_PoissonRatio;		//泊松比率
+	RowObjectFace<7>  m_WaveSpeed;			//波速(7)
+	RowObjectFace<1>  m_UnKown9;			//1
+	RowObjectFace<1>  m_UnKown10;			//-1
+	RowObjectFace<1>  m_SectionNum;			//管段分段数取整
+	RowObjectFace<1>  m_UnKown11;			//-1
+	RowObjectFace<1>  m_UnKown12;			//-1
+	RowObjectFace<1>  m_UnKown13;			//-1
+	RowObjectFace<1>  m_ParaNum;		    //管道并联数
+	RowObjectFace<1>  m_PartFull;			//管道流体与满管百分比(-1:表示没有选中这一项)
+	RowObjectFace<1>  m_IDReduce;			//内直径减少百分比
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

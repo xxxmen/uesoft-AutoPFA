@@ -1,0 +1,8 @@
+修改日期               修改文件                                         修改内容                                   修改人
+-----------   --------------------------               ---------------------------------------------------------  ------
+2009-03-31    .\AutoPFA\AutoPFADoc.cpp                 Ln440 //保存会有格式不一致问题出现，所以先屏蔽               程华芳
+2009-04-01    .\InterfaceMgr\src\PersistentMgr.cpp     Ln86 PersistentObj::isImpFile = TRUE ;                       程华芳
+							//不重设会导致读Fth文件当作Imp来读
+2009-04-07    .\AutoPFA\AutoPFA.maniFest及AutoPFA.rc      加上了XP样式，使我们的软件能有三维按键效果;                 程华芳
+2009-04-14    .\AutoPFA1.1\AutoPFA\PFAOptimize.cpp      SetProperties()方法把/*IntVecIt = &IntVector.back();*/替换为 IntVecIt++;   朱芳尤
+

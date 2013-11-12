@@ -1,0 +1,20 @@
+// TransControlPerisistent.cpp: implementation of the TransControlPerisistent class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "TransControlPerisistent.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+TransControlPerisistent::TransControlPerisistent()
+{
+
+}
+
+TransControlPerisistent::~TransControlPerisistent()
+{
+
+}

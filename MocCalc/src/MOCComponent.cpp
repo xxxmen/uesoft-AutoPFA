@@ -1,0 +1,30 @@
+// MOCComponent.cpp: implementation of the MOCComponent class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "MOCComponent.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+MOCComponent::MOCComponent()
+{
+	m_nKey = 0;
+}
+
+MOCComponent::~MOCComponent()
+{
+
+}
+
+
+
+

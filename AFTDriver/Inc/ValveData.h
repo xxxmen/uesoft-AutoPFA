@@ -1,0 +1,62 @@
+// ValveData.h: interface for the ValveData class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_VALVEDATA_H__D7C6FCB8_DE06_43E7_ACAA_5855F859491B__INCLUDED_)
+#define AFX_VALVEDATA_H__D7C6FCB8_DE06_43E7_ACAA_5855F859491B__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+//阀门
+#include "Junction.h"
+#include "JunTransData.h"
+
+class AFX_EXT_CLASS ValveData : public JunctionData  
+{
+public:
+	static JunctionData* Creator();
+	ValveData();
+	virtual ~ValveData();
+public:
+	CString Type();
+	void Type(CString strValue);
+	StrArray<13> Curve();
+	void Curve(const StrArray<13>& strValue);
+	StrArray<3> ExitPress();
+	void ExitPress(const StrArray<3>& strValue);
+	CString KOrCv();
+	void KOrCv(CString strValue);
+	StrArray<3> BasisArea();
+	void BasisArea(const StrArray<3>& strValue);
+private:
+	void AppendArray();
+	void InitExtra(CString strData);
+	virtual CString GetDefaultData();
+public:
+	JunTransData m_TranData;	
+private:
+	RowObjectFace<1> m_Type;			//类型(0：内部阀门，-1：出口阀门)
+	VariableFace<13,7> m_Curve;			//损失模型(0：流量系数模型，1：K系数模型)
+										//Y轴参数类型数字标记[]
+										//Y轴参数单位[]
+										//X轴参数类型数字标记[]
+										//X轴参数单位[]
+										//x的最大取值[]
+										//曲线类型[曲线类型（-2：K值变化，1：压力损失多项式，2：压力损失内插值）]
+										//公式中参数和常量的个数[]
+										//公式中的参数和常量a，b，c，d，e的值[]
+	RowObjectFace<3> m_ExitPress;		//出口压力类型0：水头1：压力\压力值\单位
+	RowObjectFace<1> m_KOrCv;			//K或Cv系数值
+	RowObjectFace<3> m_BasisArea;		//损失模型的面积引用0：默认上游管道面积，1：下游管道面积2：用户指定面积3：用户指定直径
+										//值
+										//单位
+	RowObjectFace<2> m_UnKown;			//1（未知）\0（未知）
+	//JunTransData m_TranData;			//没有周期函数RowObjectFace<5> m_Periodic;
+	RowObjectFace<1> m_UnKown3;         //0（未知）
+	RowObjectFace<4> m_Fth2;            //发现有4项,现由3改为4.CHANGE BY wenzk
+	RowObjectFace<10> m_Fth3;
+
+};
+
+#endif // !defined(AFX_VALVEDATA_H__D7C6FCB8_DE06_43E7_ACAA_5855F859491B__INCLUDED_)

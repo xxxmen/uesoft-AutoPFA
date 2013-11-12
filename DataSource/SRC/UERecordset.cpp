@@ -1,0 +1,28 @@
+// UERecordset.cpp: implementation of the UERecordset class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "UERecordset.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+UERecordset::UERecordset()
+{
+
+}
+
+UERecordset::~UERecordset()
+{
+
+}
+
+

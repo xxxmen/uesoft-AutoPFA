@@ -1,0 +1,16 @@
+1、在vss中选中AutoPFA1.1
+2、右击在菜单选择“得到最新版本”，然后在弹出对话框中选择本机路径、选中“递归”和“建立树”。
+   将在本机建立AutoPFA1.1目录树并递归复制所有文件。
+3、选择…\AutoPFA1.1\AutoPFA\AutoPFA.dsp打开工程。
+4、在菜单上选择Tools\Options\Directories,设置头文件路径和库文件路径.
+   在Options对话框选择include file设置…\AutoPFA1.1\AFTDriver\Inc
+   在Options对话框选择include file设置…\AutoPFA1.1\persistent\inc
+   在Options对话框选择include file设置…\AutoPFA1.1\USChart\inc
+   在Options对话框选择include file设置…\AutoPFA1.1\calcdriver\inc
+   注意将路径上移优先其它工程路径
+   在Options对话框选择Library file设置…\AutoPFA1.1\Lib
+   在Options对话框选择Library file设置…\AutoPFA1.1\Libd
+5、pdms的单位模块将会使用。同理将单位模块头文件和库文件路径包含进来。
+   设置完成。VC编译时将从以上设置的路径来搜索头文件和动态库
+
+注意：单位模块APQUANTITY的StdAfx.cpp文件的代码需要屏蔽掉。

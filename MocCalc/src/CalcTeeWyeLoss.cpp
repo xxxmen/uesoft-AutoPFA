@@ -1,0 +1,26 @@
+// CalcTeeWyeLoss.cpp: implementation of the CalcTeeWyeLoss class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "CalcTeeWyeLoss.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CalcTeeWyeLoss::CalcTeeWyeLoss()
+{
+
+}
+
+CalcTeeWyeLoss::~CalcTeeWyeLoss()
+{
+
+}

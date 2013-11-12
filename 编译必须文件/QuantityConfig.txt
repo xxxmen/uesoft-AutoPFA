@@ -1,0 +1,309 @@
+QSYS_BEGIN
+SIS
+QTYPE_BEGIN
+Area,meters2
+meters2,1.0,0
+cm2,1.0E-4,0
+mm2,1.0E-6,0
+feet2,9.29E-2,0
+inches2,6.45E-4,0
+QTYPE_END
+QTYPE_BEGIN
+Density,kg/m3
+kg/m3,1.0,0
+gram/cm3,1000.0,0
+gram/liter,1.0,0
+kg/cm3,1.0E+6,0
+kg/liter,1000.0,0
+lbm/ft3,16.0185,0
+lbm/gal,119.8265,0
+lbm/in3,2.768E+4,0
+S.G. water,1000.0,0
+Slug/ft3,515.379,0
+QTYPE_END
+QTYPE_BEGIN
+MassFlow,kg/sec
+kg/sec,1.0,0
+gram/min,1.0/60000,0
+gram/sec,1.0E-3,0
+kg/day,1.0/86400,0
+kg/hr,1.0/3600,0
+kg/min,1.0/60,0
+lbm/day,5.25E-6,0
+lbm/hr,1.24E-4,0
+lbm/min,7.56E-3,0
+lbm/sec,0.4536,0
+m-ton/day,1.0/86.4,0
+m-ton/hr,1.0/3.6,0
+m-ton/min,100.0/6,0
+m-ton/sec,1000,0
+slug/day,1.0/5920.28,0
+slug/hr,1.0/246.678,0
+slug/min,1.0/4.111,0
+slug/sec,14.35939,0
+ton/day,0.011574,0
+ton/hr,0.28,0
+ton/min,16.6667,0
+ton/sec,1000.0,0 
+QTYPE_END
+QTYPE_BEGIN
+PercentFractional,Percent
+Percent,1.0,0
+Decimal,100.0,0
+QTYPE_END
+QTYPE_BEGIN
+Power,W
+W,1.0,0
+Btu/day,0.012211,0
+Btu/hr,0.293071,0
+Btu/min,17.5843,0
+Btu/s,1055.056,0
+cal/day,4.845E-5,0
+cal/hr,1.16300E-3,0
+cal/min,0.06978,0
+cal/s,4.1868,0
+kcal/day,0.04845,0
+kcal/hr,1.163,0
+kcal/min,69.78,0
+kcal/s,4186.8,0  
+kW,1000.0,0
+MW,1000000.0,0
+kJ/day,0.01157,0
+kJ/hr,0.277778,0
+ft-lbf/day,1.5690E-5,0
+ft-lbf/hr,3.76616E-4,0
+ft-lbf/min,0.02259697,0
+ft-lbf/s,1.3558,0
+hp,745.7,0
+QTYPE_END
+QTYPE_BEGIN
+PressGradient,Pascals/m
+Pascals/m,1.0,0
+Pascals/100 m,0.01,0
+kPa/100 m,10.0,0
+kPa/m,1000.0,0
+MPa/100 m,1.0E+4,0
+MPa/m,1.0E+6,0
+psf/100 ft,1.570876,0
+psf/ft,157.0876,0
+psf/in,1885.05,0
+psi/100 ft,226.2024,0
+psi/ft,22620.24,0 
+psi/in,271443.119,0
+QTYPE_END
+QTYPE_BEGIN
+Pressure,Pascals
+Pascals,1.0,0
+Pascals (g),1.0,101325
+atm,101325,0
+bar,1.0E+5,0
+barG,1.0E+5,101325
+cm H2O std.,98.66,0
+cm H2O std. (g),98.66,101325
+dyn/cm2,0.1,0
+dyn/cm2 (g),0.1,101325
+ft. H2O std.,2989,0
+ft. H2O std. (g),2989,101325
+in. H2O std.,249.088,0
+in. H2O std. (g),249.088,101325
+in. Hg,3386.39,0
+in. Hg (g),3386.39,101325
+kg/cm2,98060.5,0
+kg/cm2 (g),98060.5,101325
+kPa,1000.0,0
+kPa (g),1000.0,101325
+m H2O std.,9806.6,0
+m H2O std. (g),9806.6,101325
+mm H2O std.,9.80665,0
+mm H2O std. (g),9.80665,101325
+mm Hg,400.0/3,0
+mm Hg (g),400.0/3,101325
+MPa,1.0E+6,0
+MPa (g),1.0E+6,101325
+psfa,47.8803,0
+psfg,47.8803,101325
+psia,6894.76,0
+psig,6894.76,101325
+psid,6894.76,0
+psfd,47.8803,0
+QTYPE_END
+QTYPE_BEGIN
+Resistance,sec2/m5
+sec2/m5,1.0,0
+ft/gpm2,76575702.524,0
+hr2/cm5,1.296E+17,0
+hr2/ft5,4.9264E+9,0
+hr2/in5,1.22585E+15,0
+hr2/m5,1.296E+07,0
+min2/cm5,3.6E+13,0
+min2/ft5,1.368446E+6,0
+min2/in5,3.40514E+11,0
+min2/m5,3600.0,0
+sec2/cm5,1.0E+10,0
+sec2/ft5,380.124,0
+sec2/in5,9.4587E+7,0
+QTYPE_END
+QTYPE_BEGIN
+Time,seconds
+seconds,1.0,0
+days,86400.0,0
+hours,3600.0,0
+milliseconds,1.0E-3,0
+minutes,60.0,0
+QTYPE_END
+QTYPE_BEGIN
+Torque,N-m
+kg-m,9.8,0
+lbf-ft,1.356,0
+lbf-in,0.113,0
+N-m,1.0,0
+QTYPE_END
+QTYPE_BEGIN
+Velocity,meters/sec
+cm/hr,1.0/360000,0
+cm/min,1.0/6000,0
+cm/sec,1.0/100,0
+feet/day,3.5278E-6,0
+feet/hr,8.4667E-5,0
+feet/min,0.00508,0
+feet/sec,0.3048,0
+inches/min,4.233E-04,0
+inches/sec,0.0254,0
+km/day,10.0/864,0
+km/hr,10.0/36,0
+km/min,100.0/6,0
+km/sec,1000.0,0
+meters/day,1.0/86400,0
+meters/hr,1.0/3600,0
+meters/min,1.0/60,0
+meters/sec,1.0,0
+miles/day,0.01863,0
+miles/hr,0.447,0
+QTYPE_END
+QTYPE_BEGIN
+Viscosity,kg/sec-m
+centipoise,1.0E-3,0 
+kg/sec-cm,100.0,0 
+kg/sec-mm,1000.0,0
+lbf-hr/ft2,1.7236921E+05,0
+lbf-hr/in2,2.482758621E+07,0
+lbf-s/ft2,47.88,0
+lbf-s/in2,6894.76859,0
+lbm/hr-ft,1.0/2419.085,0
+lbm/hr-in,1.0/201.59,0
+lbm/s-ft,1/6719.68,0
+lbm/s-in,17.858,0
+Pa-sec,1.0,0
+kg/sec-m,1.0,0
+poise,0.1,0
+QTYPE_END
+QTYPE_BEGIN
+VolumetricFlow,m3/sec
+acre-ft/day,1.0/70.016,0
+acre-ft/hr,0.34278,0
+acre-ft/min,20.567,0
+acre-ft/sec,1234,0
+barrels/day,1.0/543396.2264,0
+barrels/hr,1.0/22641.5094,0
+barrels/min,1.0/377.35849,0
+barrels/sec,1.0/6.289,0
+cm3/hr,1.0/3600000000,0
+cm3/min,1.0/60000000,0
+cm3/sec,1.0/1000000,0
+ft3/day,1.0/3051190.08,0
+ft3/hr,1.0/127132.92,0
+ft3/min,1.0/2118.882,0
+ft3/sec,1.0/35.3147,0
+gal-UK/day,1.0/19005840,0
+gal-UK/hr,1.0/791910,0
+gal-UK/min,1.0/13198.5,0
+gal-UK/sec,1.0/219.975,0
+gal/day,1.0/22824979.2,0
+gal/hr,1.0/951019.2,0
+gal/min,1.0/15850.68,0
+gal/sec,1.0/264.178,0
+in3/hr,1.0/219684960,0
+in3/min,1.0/3661416,0
+in3/sec,1.0/61023.6,0
+liter/hr,1/3600000,0
+liter/min,1/60000,0
+liter/sec,1/1000,0
+m3/day,1/86400,0
+m3/hr,1/3600,0
+m3/min,1/60,0
+m3/sec,1.0,0
+MGD,1/22.8245,0
+mm3/hr,1/3600000000000,0
+mm3/min,1/60000000000,0
+mm3/sec,1.0E-9,0
+QTYPE_END
+QTYPE_BEGIN
+Diameter,meters
+meters,1.0,0
+cm,1.0E-2,0
+mm,1.0E-3,0
+feet,0.3048,0
+inches,0.0254,,0
+microinches,2.54E-8,0
+QTYPE_END
+QTYPE_BEGIN
+HeadGradient,m/m
+ft/100 ft,1.0E-2,0
+ft/ft,1.0,0
+m/m,1.0,0
+m/100 m,1.0E-2,0
+m/km,1.0E-3,0
+QTYPE_END
+QTYPE_BEGIN
+Length,meters
+meters,1.0,0
+cm,1.0E-2,0
+mm,1.0E-3,0
+feet,0.3048,0
+inches,0.0254,0
+km,1000.0,0
+miles,1609.344,0
+QTYPE_END
+QTYPE_BEGIN
+Mass,kg
+kg,1.0,0
+g,1.0E-3,0
+lbm,1.0/2.20462,0
+ton,907.185,0
+m-ton,1000.0,0
+QTYPE_END
+QTYPE_BEGIN
+Temperature,deg. K
+deg. C,1,273.15
+deg. K,1,0
+deg. F,5.0/9,255.928
+deg. R,5.0/9,0
+QTYPE_END
+QTYPE_BEGIN
+Volume,meters3
+acre-ft,1233.5,0
+barrels,1/6.3,0
+cm3,1.0E-6,0
+feet3,0.02832,0
+gal,1/264.172,0
+gal-UK,1/219.69,0
+inches3,1.6387E-5,0
+liter,1.0E-3,0
+meters3,1.0,0
+ml,1.0E-6,0
+mm3,1.0E-9,0
+QTYPE_END
+QTYPE_BEGIN
+WeightperLength,kg/m
+kg/m,1.0,0
+kg/cm,100.0,0
+lbm/ft,1.488166,0
+lbm/in,17.858,0
+QTYPE_END
+QTYPE_BEGIN
+Inertia,kg-m2
+kg-m2,1.0,0
+lbm-ft2,4.2140E-2,0
+lbm-in2,2.9264E-4,0
+QTYPE_END
+QSYS_END

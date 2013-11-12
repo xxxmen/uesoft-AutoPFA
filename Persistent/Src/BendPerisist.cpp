@@ -1,0 +1,27 @@
+// BendPerisist.cpp: implementation of the BendPerisist class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "BendPerisist.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+BendPerisist::BendPerisist()
+{
+
+}
+
+BendPerisist::~BendPerisist()
+{
+
+}
+
+Junperisist* BendPerisist::CreatBend()
+{
+	//6
+	BendPerisist *pBend = new BendPerisist;
+	return pBend;
+}

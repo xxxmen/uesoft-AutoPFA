@@ -1,0 +1,29 @@
+// PipePerisist.cpp: implementation of the PipePerisist class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "PipePerisist.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+PipePerisist::PipePerisist()
+{
+	m_iKey = 0;
+}
+
+PipePerisist::~PipePerisist()
+{
+
+}
+
+
+

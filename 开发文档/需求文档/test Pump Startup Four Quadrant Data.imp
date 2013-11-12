@@ -1,0 +1,297 @@
+AFT IMPULSE VERSION 3.0 INPUT FILE
+
+[APPLICATION]
+AppName= Impulse
+Version= 09030041  'F4.0.000  'aavvvrrr where aa=app#, vvv=version, rrr=revsion (Arrow 2.1c+ = 06021310)
+ 
+[TOOLBOX PREFERENCES]
+NumberOfToolsUsed= 19 
+ToolsUsed=1,2,3,4,5,21,7,8,9,10,11,22,24,23,25,16,17,19,20
+ToolIcons=8,5,24,13,3,2,3,3,6,3,3,6,6,3,3,5,14,2,3
+ToolIconRotation=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NumberOfToolsNotUsed= 0 
+ 
+[WORKSPACE PREFERENCES]
+JunctionLabelColor= 0 
+PipeLabelColor= 0 
+PipeColor= 8421504 
+SelectColor= 255 
+WorkspaceColor= 16777215 
+WorkspaceChildColor= 16777215 
+WorkspaceGrandChildColor= 16777215 
+WorkspaceGridColor= 16777088 
+UndefinedColor= 255 
+ClosedJctColor= 255 
+GridSize= 0 
+GridLineStyle=-1 
+GridOn= 0 
+Pipe Thickness= 3 
+Vary Thickness= 0 
+Thickness Parameters=0,0,0,0
+Thick Units=None
+Closed Pipe Style= 2 
+Junction Size= 100 
+Workspace Font Name=Arial
+Workspace Font Size= 9 
+Workspace Font Bold= 0 
+Workspace Font Italic= 0 
+Reverse CTRL=-1 
+Use Shift For Labels= 0 
+ShowNameNumber= 1 
+JunctionLableLocation= 0 
+IconSource= 0 
+AutoIncPipe= 1 
+AutoIncJct= 1 
+PipeArrow= 5 
+ReverseSelectBehavior=-1 
+Use Flow Symbols=-1 
+Inflow=v
+Outflow=^
+Use Closed Symbols=-1 
+Show Closed Jct Border=-1 
+Pipes=X
+Junctions=X
+Transient Data=T
+Transient Special Con=#
+Infinite Pipe=*
+ 
+[PARAMETER PREFERENCES]
+HGL/Pressure=  0 
+Flow Rate=  0 
+Loss Model=  0 
+Elevation Specified=  0 
+Default Elevation= 0, feet
+PipeDesign= 1
+PipeDesignLosses= 1
+PipeDesignHeatTransfer= 1
+JctDesign= 1
+PumpDesign= 1
+UseLastPipe= -1
+LastMaterial= None
+LastSize= None
+LastType= None
+DefaultMaterial= None
+ 
+[UNIT PREFERENCES]
+NumberCustomUnits=0
+Unit System=  0 
+Preferred Units= feet,feet2,feet3,feet/sec,gal/min,lbm/sec,psia,deg. F,lbm/ft3,hp,inches,psid,psia,psi/100 ft,Btu/s-ft2,Btu/hr-ft-R,Btu/lbm-R,Btu/hr-ft2-R,sec2/ft5,lbm/hr-ft,U.S. Dollars,Btu/lbm,Percent,hr-R/Btu,seconds,Btu/s,deg. F,lbm/ft,lbm,kW-hr,ft/100 ft,gpm/psid^0.5,lbm-ft2,lbf-ft 
+Length Units=cm,feet,inches,km,meters,miles,mm 
+Area Units=cm2,feet2,inches2,meters2,mm2 
+Volume Units=acre-ft,barrels,cm3,feet3,gal,gal-UK,inches3,liter,meters3,ml,mm3 
+Velocity Units=cm/hr,cm/min,cm/sec,feet/day,feet/hr,feet/min,feet/sec,inches/min,inches/sec,km/day,km/hr,km/min,km/sec,meters/day,meters/hr,meters/min,meters/sec,miles/day,miles/hr 
+Volumetric Flow Rate Units=acre-ft/day,acre-ft/hr,acre-ft/min,acre-ft/sec,barrels/day,barrels/hr,barrels/min,barrels/sec,cm3/hr,cm3/min,cm3/sec,ft3/day,ft3/hr,ft3/min,ft3/sec,gal-UK/day,gal-UK/hr,gal-UK/min,gal-UK/sec,gal/day,gal/hr,gal/min,gal/sec,in3/hr,in3/min,in3/sec,liter/hr,liter/min,liter/sec,m3/day,m3/hr,m3/min,m3/sec,*MGD,mm3/hr,mm3/min,mm3/sec 
+Mass Flow Rate Units=gram/min,gram/sec,kg/day,kg/hr,kg/min,kg/sec,lbm/day,lbm/hr,lbm/min,lbm/sec,m-ton/day,m-ton/hr,m-ton/min,m-ton/sec,slug/day,slug/hr,slug/min,slug/sec,ton/day,ton/hr,ton/min,ton/sec 
+Pressure Units=atm,bar,barG,cm H2O std.,cm H2O std. (g),dyn/cm2,dyn/cm2 (g),ft. H2O std.,ft. H2O std. (g),in. H2O std.,in. H2O std. (g),in. Hg,in. Hg (g),kg/cm2,kg/cm2 (g),kPa,kPa (g),m H2O std.,m H2O std. (g),mm H2O std.,mm H2O std. (g),mm Hg,mm Hg (g),MPa,MPa (g),Pascals,Pascals (g),psfa,psfg,psia,psig 
+Temperature Units=deg. C,deg. F,deg. K,deg. R 
+Density Units=gram/cm3,gram/liter,kg/cm3,kg/liter,kg/m3,lbm/ft3,lbm/gal,lbm/in3,S.G. water,slug/ft3 
+Power Units=Btu/day,Btu/hr,Btu/min,Btu/s,cal/day,cal/hr,cal/min,cal/s,ft-lbf/day,ft-lbf/hr,ft-lbf/min,ft-lbf/s,hp,kcal/day,kcal/hr,kcal/min,kcal/s,kJ/day,kJ/hr,kW,MW,W 
+Diameter Units=cm,feet,inches,meters,microinches,mm 
+Pressure Differential Units=atm,bar,cm H2O std.,dyn/cm2,ft. H2O std.,in. H2O std.,in. Hg,kg/cm2,kPa,m H2O std.,mm H2O std.,mm Hg,MPa,Pascals,psfd,psid 
+Pressure Absolute Units=atm,bar,cm H2O std.,dyn/cm2,ft. H2O std.,in. H2O std.,in. Hg,kg/cm2,kPa,m H2O std.,mm H2O std.,mm Hg,MPa,Pascals,psfa,psia 
+Pressure Gradient Units=kPa/100 m,kPa/m,MPa/100 m,MPa/m,Pascals/100 m,Pascals/m,psf/100 ft,psf/ft,psf/in,psi/100 ft,psi/ft,psi/in 
+Heat Flux Units=Btu/hr-ft2,Btu/hr-in2,Btu/s-ft2,Btu/s-in2,kJ/hr-cm2,kJ/hr-m2,kW/cm2,kW/m2,lbf/s-ft,lbf/s-in,MW/cm2,MW/m2,W/cm2,W/m2 
+Conductivity Units=Btu-in/s-ft2-R,Btu/hr-ft-R,Btu/s-ft-R,cal/s-cm-K,kW/m-K,lbf/hr-R,lbf/s-R,W/m-K 
+Specific Heat Units=Btu/lbm-R,cal/g-K,ft-lbf/lbm-R,kJ/kg-K 
+Convection Coefficient Units=Btu/hr-ft2-R,Btu/s-ft2-R,kW/m2-K,W/m2-K 
+Resistance Units=ft/gpm2,hr2/cm5,hr2/ft5,hr2/in5,hr2/m5,min2/cm5,min2/ft5,min2/in5,min2/m5,sec2/cm5,sec2/ft5,sec2/in5,sec2/m5 
+Viscosity Units=centipoise,kg/sec-cm,kg/sec-m,kg/sec-mm,lbf-hr/ft2,lbf-hr/in2,lbf-s/ft2,lbf-s/in2,lbm/hr-ft,lbm/hr-in,lbm/s-ft,lbm/s-in,Pa-sec,poise 
+Monetary Units=U.S. Dollars 
+Enthalpy Units=Btu/lbm,ft-lbf/lbm,kJ/kg 
+Percent/Fractional Units=Decimal,Percent 
+Thermal Resistance Units=hr-R/Btu,K/kW,K/W,s-R/Btu 
+Time Units=*days,hours,milliseconds,minutes,seconds,*years 
+Heat Rate=Btu/day,Btu/hr,Btu/min,Btu/s,cal/day,cal/hr,cal/min,cal/s,ft-lbf/day,ft-lbf/hr,ft-lbf/min,ft-lbf/s,hp,kcal/day,kcal/hr,kcal/min,kcal/s,kJ/day,kJ/hr,kW,MW,W 
+Temperature Differential Units=deg. C,deg. F,deg. K,deg. R 
+Weight per Length Units=kg/cm,kg/m,lbm/ft,lbm/in 
+Mass Units=g,kg,lbm,m-ton,ton 
+Energy Units=Btu,cal,hp-hr,kcal,kJ,kW-hr,MJ,MW-hr,W-hr 
+Head Gradient Units=ft/100 ft,ft/ft,m/100 m,m/km,m/m 
+Valve Cv Units=gpm/psid^0.5 
+Inertia Units=kg-m2,lbm-ft2,lbm-in2 
+Torque Units=kg-m,lbf-ft,lbf-in,N-m 
+ 
+[MODEL DATA PREFERENCES]
+Pipe Parameters= 14,1,10,7,9,11,13,28,40,0,4,5,6,35,37
+Junction Parameters(1)= 15,2,9,5,6,3,101,102,103,105,107,108,109,110,111,112
+Junction Parameters(2)= 10,2,9,5,6,3,103,108,109,118,119
+Junction Parameters(3)= 17,2,9,5,6,3,101,102,103,104,106,109,112,113,114,115,116,117
+Junction Parameters(4)= 15,2,9,5,6,3,102,103,105,108,111,112,113,114,115,116
+Junction Parameters(5)= 9,2,9,5,6,3,102,105,103,104
+Junction Parameters(7)= 9,2,9,5,6,3,102,105,103,104
+Junction Parameters(8)= 19,2,9,5,6,3,101,106,107,102,103,104,105,110,112,113,114,115,116,117
+Junction Parameters(9)= 18,2,9,5,6,3,101,102,103,104,105,114,115,116,107,109,110,112,113
+Junction Parameters(10)= 15,2,9,5,6,3,101,106,102,103,104,105,110,111,108,109
+Junction Parameters(11)= 5,2,9,5,6,3
+Junction Parameters(16)= 18,2,9,5,6,3,102,108,107,103,104,110,112,114,115,116,117,118,119
+Junction Parameters(17)= 22,2,9,5,6,3,101,102,105,103,110,111,115,106,107,118,121,124,125,126,127,128,129
+Junction Parameters(19)= 5,2,9,5,6,3
+Junction Parameters(20)= 10,2,9,5,6,3,101,102,103,104,105
+Junction Parameters(21)= 17,2,9,5,6,3,101,106,107,108,0,102,103,104,105,112,113,111
+Junction Parameters(22)= 18,2,9,5,6,3,101,0,102,103,104,105,106,107,108,109,110,111,112
+Junction Parameters(23)= 7,2,9,5,6,3,102,103
+Junction Parameters(24)= 22,2,9,5,6,3,102,104,105,106,116,107,108,109,110,111,112,113,114,115,117,120,121
+Junction Parameters(25)= 12,2,9,5,6,3,111,102,103,104,106,105,108
+ 
+[FONT PREFERENCES]
+Font Name= Arial
+Font Size= 8.16
+Font Bold= 0
+Font Italic= 0
+ 
+[GRAPH SETS]
+Number of Graph Sets=0
+RecentSet = None
+ 
+[SCENARIO MANAGER]
+Number of Scenarios= 1
+Scenario #1= Base Scenario,,0,
+Starting Scenario = 1
+Outfile #1= 
+
+[SETTINGS]
+ChecklistFlags= -1, -1, 0, 0, 0, 0
+AnalysisType= 0
+HPages= 1
+VPages= 1
+HSCValue= 0
+VSCValue= 0
+Zoom= 1
+BackgroundPicturePath= None
+OutputFile= None
+PresTolType= 1
+PresAbsTolType= 0
+PresAbsTol= 0,None
+PresRelTol= .00001
+FlowTolType= 1
+FlowAbsTolType= 0
+FlowAbsTol= 0,None
+FlowRelTol= .00001
+RelaxationType= 0
+FlowRelaxation= 1
+PresRelaxation= 1
+TempLimitUpper= -10000,None
+TempLimitLower= -10000,None
+FlowBalance= -1
+Maximum Iterations= 50000
+Keep Iteration History= 0
+Matrix Method= 0
+GS Relax= 0
+AutoDetect= 100
+AutoRelax= 0
+
+[SECTIONING]
+Search= -1
+MaxSections= 2
+MinSections = 1
+MaxError= 10
+PctIncrement= .05
+Sort= -1
+IdealSections= 1
+TimeStep= 0
+
+[TRANSIENT CONTROL]
+StartTime= 0
+StopTime= 1
+TimeUnits= seconds
+Frequency= 1
+ModelCavitation= 1
+VariableResistance= 0
+StopOnArtificialTransient= -1
+Criteria= .5
+CriteriaMinFlow= 0
+CriteriaMinFlowUnits= gal/min
+TotalSteps= 0
+
+[FLUID DATA]
+Number of Fluids= 1
+Fluid 1= Unspecified,0,None
+Fraction Units Type= 1
+Interpolation Type= 2
+Temperature= 0,None
+Density= 0,None
+Viscosity= 0,None
+Bulk Modulus= 0,
+Vapor Pressure= 0,None
+Atmospheric Pressure= 1,atm
+Gravity= 1
+VariableGExists= 0
+Properties= 0
+Constant Density= 0
+Viscosity Model= 0
+ReTransLam= 2300
+ReTransTurb= 4000
+NonnewtonianCorrect= 0
+ChempakPhase= 0
+
+[OUTPUT PREFERENCES]
+Pipe Data Order= 114,3,7,14,15,130,131,22,17,21,31,8,9,11,12
+Pipe Data Units= None,gal/min,feet/sec,psia,psia,feet,feet,psid,psid,psid,feet,psia,psia,psia,psia
+Junction Data Order= 40,1,2,3,4,28,27,38
+Junction Data Units= None,psia,psia,psia,psia,gal/min,lbm/sec,None
+Pipe Transient Data Order= 1,3,5,8
+Pipe Transient Data Units= psia,feet,lbm/sec,gal/min
+Jct Transient Data Order= 
+Jct Transient Data Units= 
+Pump Summary Order= 15,1,2,3,4,5,6,7,8,9,10,11
+Pump Summary Units= None,gal/min,lbm/sec,psid,feet,Percent,Percent,hp,gal/min,Percent,feet,feet
+Valve Summary Order= 12,1,2,3,4,5,6,7,8,11
+Valve Summary Units= None,None,gal/min,lbm/sec,psid,feet,psia,None,None,None
+General Section Options= -1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,0
+Wrap Headers= 1
+Digits= 4
+Use Exponential= 0
+Column Alignment= 0
+Magnitude Limit= 6
+Output To Printer= 0
+Output To File= 0
+Auto Transfer Results= 0
+Transfer Valve State= 0
+Save Model After Transfer= 0
+Analysis Title= AFT Impulse Model
+Analysis Reference= 
+MaxMin Table= 1
+
+[VISUAL PREFERENCES]
+VRShowOptions= 0,0,0,0,-1,-1,0,0,0,-1,-1,0,0,-1
+VRNumDigits= 2
+VRFont= Arial
+VRFontStyle= 9,0,0
+VRTitleFont= Arial
+VRTitleFontStyle= 13,0,0
+VRLegendFont= Arial
+VRLegendFontStyle= 9,0,0
+VRColorMapOptions= 5
+VRNumColorMaps0= 0
+VRNumColorMaps1= 0
+VRNumColorMaps2= 0
+VRTransientOutputFilter= 0
+VRTransientPipeOutput= 0
+VROutputFilter= 0
+VRPipeOutput= 0
+VRJctOutput= 0
+VRInputFilter= 1
+VRPipeInput= 0
+VRJctInput= 0
+VRTitleLocation= -1,-1
+VRLegendLocation= -1,-1
+
+[JUNCTIONS -- SCENARIO #1 -- Base Scenario]
+NumberOfJunctions= 1
+2,1,9,1,Reservoir,0,4800,2100,-1,0,5,0,0,0,1E+31,feet,0,0,0,0,None,1,0,0,None,0,None,0,None,None,-1,0,,1,142.5,-285,-999999,-999999,1,5,-1,-1,25,0,,1,-1,Arial,9,0,0,0,0,-999,0,None,1,None,0,None,0,None,0,0,0,0,0,0,0,0,-1,-1,0,None,-1,-1,-1,-1,-1,-1,0,None,-1,-1,-1,-1,None,1,0,seconds,None,None,1,0,seconds,None
+
+[PIPES -- SCENARIO #1 -- Base Scenario]
+NumberOfPipes= 0
+
+[ARCHIVE INFO -- SCENARIO #1 -- Base Scenario]
+NumberOfArchiveSets= 0
+
+[ARCHIVE MESSAGES -- SCENARIO #1 -- Base Scenario]
+NumberOfMessages= 0
+
+[RAW DATA SETS]
+Number Raw Data Sets= 0
+
+[RAW DATA REFERENCES]
+ 
+[REFERENCE]
